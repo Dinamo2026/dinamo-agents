@@ -333,10 +333,8 @@
         <span>דינמו</span>
       </div>
       <div class="filters" id="filters" role="group" aria-label="סינון">
-        <button class="chip" data-f="all" aria-pressed="true">הכול · 12</button>
-        <button class="chip" data-f="live" aria-pressed="false">עובדים עכשיו · 3</button>
-        <button class="chip" data-f="soon" aria-pressed="false">הבא בתור · 1</button>
-        <button class="chip" data-f="spec" aria-pressed="false">מאופיינים · 7</button>
+        <button class="chip" data-f="all" aria-pressed="true">הכול · 13</button>
+        <button class="chip" data-f="live" aria-pressed="false">עובדים עכשיו · 12</button>
         <button class="chip" data-f="sleep" aria-pressed="false">ישן · 1</button>
       </div>
     </div>
@@ -358,8 +356,7 @@
             <small>שם יש הכי הרבה כוח: קבצים, מסכים, ועבודה ארוכה.</small></div>
         </div>
       </div>
-      <p><b>ליאת · אופיר · שירה בנויים ועובדים</b>; השאר מאופיינים וממתינים —
-         להקים אחד מהם כותבים <span class="say">בוא נבנה את טל</span></p>
+      <p><b>כל הסוכנים בנויים ועובדים.</b> חן ישנה בכוונה — המועדון מוקפא, והיא מתעוררת רק כשתגידי.</p>
     </div>
 
     <details class="rhythm" id="rhythm">
@@ -577,7 +574,7 @@ function faceSVG(a){
        + back + body + head + front + brows + eyes + mouth + extra + '</svg>';
 }
 
-const LINE = ["tal","shira","roni","ofir","tamar","keren","liat","karmel","nadav"];
+const LINE = ["tal","shira","peleg","roni","ofir","tamar","keren","liat","karmel","nadav"];
 const byId = Object.fromEntries(AGENTS.map(a => [a.id, a]));
 
 /* ---------- production-line rail ---------- */
@@ -776,7 +773,7 @@ function copy(text, btn, ico){
   });
   let saved = "all";
   try{ saved = localStorage.getItem("dinamo-agents-filter") || "all"; }catch(e){}
-  setFilter(["all","live","soon","spec","sleep"].includes(saved) ? saved : "all");
+  setFilter(["all","live","sleep"].includes(saved) ? saved : "all");
 }
 
 async function tryOpen(password, fromStore){
